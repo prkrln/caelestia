@@ -202,6 +202,12 @@ if confirm-overwrite $config/btop
     ln -s (realpath btop) $config/btop
 end
 
+# Nvim
+if confirm-overwrite $config/nvim
+    log 'Installing nvim config...'
+    ln -s (realpath nvim) $config/nvim
+end
+
 # Install spicetify
 if set -q _flag_spotify
     log 'Installing spotify (spicetify)...'
