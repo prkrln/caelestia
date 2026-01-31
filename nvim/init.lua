@@ -9,7 +9,8 @@ vim.opt.ignorecase = true
 vim.opt.signcolumn = 'yes'
 
 vim.pack.add({
-	{src = "https://github.com/neanias/everforest-nvim"},
+	{src = "https://github.com/bjarneo/pixel.nvim"},
+	{src = "https://github.com/xiyaowong/transparent.nvim"},
 	{src = "https://github.com/neovim/nvim-lspconfig"},
 	{src = "https://github.com/nvim-telescope/telescope.nvim"},
 	{src = "https://github.com/nvim-lua/plenary.nvim"},
@@ -20,7 +21,8 @@ vim.pack.add({
 	{src = "https://github.com/github/copilot.vim"},
 })
 
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme pixel")
+require('transparent').setup({})
 
 require("mason").setup()
 require("mason-lspconfig").setup()
